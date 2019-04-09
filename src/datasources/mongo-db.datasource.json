@@ -1,0 +1,11 @@
+{
+  "name": "MongoDb",
+  "connector": "mongodb",
+  "url": "mongodb://dhochwart:123456a@ds135776.mlab.com:35776/dhochwart",
+  "host": "",
+  "port": 0,
+  "user": "",
+  "password": "",
+  "database": "",
+  "useNewUrlParser":"true"
+}
