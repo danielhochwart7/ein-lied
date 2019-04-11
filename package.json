@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build:apidocs": "lb-apidocs",
-    "build": "./node_modules/.bin/lb-tsc es2017 --outDir dist",
+    "build": "lb-tsc es2017 --outDir dist",
     "build:watch": "lb-tsc --watch",
     "clean": "lb-clean dist",
     "lint": "npm run prettier:check && npm run tslint",
@@ -29,7 +29,7 @@
     "docker:build": "docker build -t ein-lied .",
     "docker:run": "docker run -p 3000:3000 -d ein-lied",
     "migrate": "node ./dist/migrate",
-    "prestart": "npm run build",
+    "prestart": "npm install && npm run build",
     "start": "node .",
     "prepublishOnly": "npm run test"
   },
