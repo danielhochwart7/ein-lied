@@ -29,7 +29,7 @@
     "docker:build": "docker build -t ein-lied .",
     "docker:run": "docker run -p 3000:3000 -d ein-lied",
     "migrate": "node ./dist/migrate",
-    "prestart": "npm install && npm run build",
+    "prestart": "npm run build",
     "start": "node .",
     "prepublishOnly": "npm run test"
   },
@@ -56,14 +56,12 @@
     "@loopback/rest-explorer": "^1.1.14",
     "@loopback/service-proxy": "^1.1.2",
     "loopback-connector-mongodb": "^3.9.2",
-    "loopback-datasource-juggler": "^4.6.2"
-  },
-  "devDependencies": {
+    "loopback-datasource-juggler": "^4.6.2",
     "@loopback/build": "^1.4.2",
+    "typescript": "^3.4.1",
     "@loopback/testlab": "^1.2.2",
     "@loopback/tslint-config": "^2.0.4",
     "@types/node": "^10.11.2",
-    "tslint": "^5.14.0",
-    "typescript": "^3.4.1"
+    "tslint": "^5.14.0"
   }
 }
