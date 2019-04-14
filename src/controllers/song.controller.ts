@@ -12,10 +12,8 @@ import {
   getFilterSchemaFor,
   getWhereSchemaFor,
   patch,
-  put,
   del,
-  requestBody,
-  HttpErrors
+  requestBody
 } from '@loopback/rest';
 import {Song} from '../models';
 import {SongRepository} from '../repositories';
@@ -70,21 +68,6 @@ export class SongController {
     return await this.songRepository.find(filter);
   }
 
-  @patch('/songs', {
-    responses: {
-      '200': {
-        description: 'Song PATCH success count',
-        content: {'application/json': {schema: CountSchema}},
-      },
-    },
-  })
-  async updateAll(
-    @requestBody() song: Song,
-    @param.query.object('where', getWhereSchemaFor(Song)) where?: Where,
-  ): Promise<Count> {
-    return await this.songRepository.updateAll(song, where);
-  }
-
   @get('/songs/{id}', {
     responses: {
       '200': {
@@ -109,20 +92,6 @@ export class SongController {
     @requestBody() song: Song,
   ): Promise<void> {
     await this.songRepository.updateById(id, song);
-  }
-
-  @put('/songs/{id}', {
-    responses: {
-      '204': {
-        description: 'Song PUT success',
-      },
-    },
-  })
-  async replaceById(
-    @param.path.string('id') id: string,
-    @requestBody() song: Song,
-  ): Promise<void> {
-    await this.songRepository.replaceById(id, song);
   }
 
   @del('/songs/{id}', {
