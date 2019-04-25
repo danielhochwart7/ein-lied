@@ -1,0 +1,57 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="https://www.pongoresume.com/images/upload/Musical%20Notes_012510b.jpg">
+</div>
+<div class="container custom-container">
+  <div class="col-md-12">
+    <h3 class="mb-3 text-center">Create Song</h3>
+
+    <div class="form-group">
+      <input type="text" [(ngModel)]="songDetails.title" class="form-control" placeholder="Title">
+    </div>
+
+    <div class="form-group">
+      <input type="text" [(ngModel)]="songDetails.lyric" class="form-control" placeholder="Lyric">
+    </div>
+
+    <div class="form-group">
+      <button class="btn btn-success btn-lg btn-block" (click)="addSong()">Create Song</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <input type="search" class="form-control" [(ngModel)]="searchText" placeholder="Search song by keyword">
+      <ul class="modal-body list-group">
+        <li *ngFor="let song of songs | filter: searchText" (click)="onSelect(song)">
+          <a href="#" class="list-group-item list-group-item-action">
+            <div>
+              <h5>{{ song.title }}</h5>
+              <h6>{{ song.lyric[0] }}...</h6>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="selectedSong" class="col-sm-6">
+      <h1>{{ selectedSong.title }}</h1>
+      <ul class="modal-body list-group">
+        <div>
+          <li *ngFor="let line of selectedSong.lyric">
+            <p>{{ line }}</p>
+          </li>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+            Present
+          </button>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
