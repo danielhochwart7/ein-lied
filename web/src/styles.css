@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+html, body {
+    height: 100%;
+    background-image: linear-gradient(to top, #364958, #364958);
+}
+body {
+    margin: 0;
+    font-family: Garamond;
+    color: #364958;
+}

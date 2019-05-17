@@ -1,0 +1,11 @@
+<div class="present-container">
+    <h1>{{ song.title }}</h1>
+    <div class="lyric-container">
+        <ul>
+            <li *ngFor="let line of song.lyric" class="list-group">
+                <p class="lyric">{{ line }}</p>
+            </li>
+        </ul>
+    </div>
+    <button class="formatted-button" mat-fab routerLink="/song-search" routerLinkActive="active">Close</button>
+</div>
