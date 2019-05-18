@@ -5,7 +5,7 @@
             <input matInput [(ngModel)]="searchText" placeholder="Search song by keyword">
         </mat-form-field>
     </div>
-    <ul class="container-fluid">
+    <ul>
         <li *ngFor="let song of songs | songFilter: searchText" (click)="onSelect(song)" class="responsive-cards-div">
             <mat-card class="song-card">
                 <mat-card-header>

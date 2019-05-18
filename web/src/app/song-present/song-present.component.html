@@ -1,5 +1,8 @@
 <div class="present-container">
-    <h1>{{ song.title }}</h1>
+    <div class="song-title">
+        <h1>{{ song.title }}</h1>
+        <h4>{{ song.author }}</h4>
+    </div>
     <div class="lyric-container">
         <ul>
             <li *ngFor="let line of song.lyric" class="list-group">
