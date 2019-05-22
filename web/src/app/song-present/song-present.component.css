@@ -34,6 +34,8 @@ button {
 }
 
 .lyric {
+    margin: 0px 0px 15px 0px;
+    padding: 10px 0px 0px 0px;
     font-family: Garamond;
     font-size: 150%;
     color: #364958;
@@ -65,4 +67,14 @@ h4 {
     color: rgba(106, 106, 106, 0.74);
     text-align: center;
     margin: 0;
+}
+
+.translations {
+    margin: 0px 0px 15px 20px;
+    font-style: italic;
+    color: rgba(106, 106, 106, 0.74);
+}
+
+.position-lyric {
+    margin: 0px 0px 0px 0px;
 }

@@ -1,4 +1,4 @@
-import {Component, Output, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Song} from '../song';
 import {ApiService} from '../api.service';
 

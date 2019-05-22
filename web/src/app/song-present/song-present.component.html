@@ -5,8 +5,9 @@
     </div>
     <div class="lyric-container">
         <ul>
-            <li *ngFor="let line of song.lyric" class="list-group">
+            <li *ngFor="let line of song.lyric; let pos = index" class="list-group position-lyric">
                 <p class="lyric">{{ line }}</p>
+                <p class="translations" *ngIf="song.translations">{{ song.translations["pt-br"][pos] }}</p>
             </li>
         </ul>
     </div>
