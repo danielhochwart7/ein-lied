@@ -6,7 +6,7 @@
     font-family: Garamond, Helvetica, sans-serif;
 }
 
-.present-container > h1 {
+h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     color: #364958;
 }
@@ -39,6 +39,7 @@ button {
     font-family: Garamond, Helvetica, sans-serif;
     font-size: 150%;
     color: #364958;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .lyric-container {
@@ -67,12 +68,14 @@ h4 {
     color: rgba(106, 106, 106, 0.74);
     text-align: center;
     margin: 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .translations {
     margin: 0px 0px 15px 20px;
     font-style: italic;
     color: rgba(106, 106, 106, 0.74);
+    text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.3);
 }
 
 .position-lyric {
