@@ -38,7 +38,7 @@ button {
 }
 
 mat-form-field {
-    max-width: 75%;
-    width: 30%;
+    min-width: 250px;
+    justify-content: center;
     display: block;
 }
