@@ -19,6 +19,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { ScrollDispatchModule } from '@angular/cdk/scrolling';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SongEditComponent } from './song-edit/song-edit.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     SongPresentComponent,
     SongSearchComponent,
     SongFilterPipe,
-    MainNavComponent
+    MainNavComponent,
+    SongEditComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatIconModule,
     MatListModule,
     ScrollDispatchModule,
-    MatSnackBarModule
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

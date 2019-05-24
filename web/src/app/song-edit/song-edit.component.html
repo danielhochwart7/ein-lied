@@ -1,0 +1,33 @@
+
+<div class="edit-container">
+  <mat-form-field>
+    <input matInput [(ngModel)]="song.title" placeholder="Title">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="song.author" placeholder="Author">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Lyric</mat-label>
+    <textarea matInput
+              cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="0"
+              cdkAutosizeMaxRows="10" [(ngModel)]="song.lyric" placeholder="Lyric">
+              <p *ngFor="let line of song.lyric">
+                {{ line }}
+              </p>
+            </textarea>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Translation</mat-label>
+    <textarea matInput
+              cdkTextareaAutosize
+              #autosize="cdkTextareaAutosize"
+              cdkAutosizeMinRows="0"
+              cdkAutosizeMaxRows="10" [(ngModel)]="song.translations" placeholder="Translation">{{ song.translations }}</textarea>
+  </mat-form-field>
+  <button class="formatted-button" mat-fab (click)="editSong(song)" routerLink="/song-search" routerLinkActive="active">Save</button>
+</div>

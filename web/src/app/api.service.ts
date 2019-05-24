@@ -36,4 +36,8 @@ export class ApiService {
     public getSongs() {
         return this.httpClient.get<Song[]>(`${this.apiURL}/songs`);
     }
+
+    public patchSong(song: Song) {
+        return this.httpClient.patch(`${this.apiURL}/songs/${song.id}`, song);
+    }
 }

@@ -1,0 +1,39 @@
+.edit-container {
+    flex-direction: column;
+    padding: 4em;
+    margin: 2em 0 2em 0;
+    box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.5);
+    background-color: #e3ecf0;
+    height: 80%;
+    font-family: Garamond;
+    position: relative;
+}
+
+button {
+    font-family: Garamond, Helvetica, sans-serif;
+    font-size: large;
+    margin-top:22px;
+}
+
+.formatted-button {
+    position: fixed;
+    float: right;
+    text-align: center;
+    justify-content: center;
+    color: #eceff1;
+    box-shadow: 0.3em 0.3em 0.3em 0em rgba(0, 0, 0, 0.6);
+    background-color: #364958;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    border-radius:50px;
+}
+
+mat-form-field {
+    min-width: 250px;
+    max-width: 600px;
+    display: block;
+    justify-content: center;
+}

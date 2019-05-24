@@ -24,24 +24,6 @@ export class SongSearchComponent implements OnInit {
         this.songDetails = { title: '', lyric: ''};
     }
 
-    addSong() {
-        const lyric: Array<string> = this.songDetails.lyric.split(', ');
-
-        const song = {
-            title: this.songDetails.title,
-            lyric
-        };
-
-        this.apiService.createSong(song)
-            .toPromise()
-            .then(() => {
-                this.flushSongDetails();
-                this.getSongs();
-            }).catch(err => {
-            console.log(`Failed to create song (${song.title}). Error: ${err}`);
-        });
-    }
-
     deleteSong() {
         this.apiService.deleteSong(this.selectedSong.id)
             .toPromise()
