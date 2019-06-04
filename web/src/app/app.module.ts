@@ -18,6 +18,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { SongEditComponent } from './song-edit/song-edit.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     SongPresentComponent,
     SongSearchComponent,
     SongFilterPipe,
-    MainNavComponent
+    MainNavComponent,
+    SongEditComponent
   ],
   imports: [
     BrowserModule,

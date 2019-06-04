@@ -14,12 +14,12 @@
                     <mat-card-subtitle>{{ song.author }}</mat-card-subtitle>
                 </mat-card-header>
                 <mat-card-content>
-                    {{ song.lyric[0] }}<br>
-                    {{ song.lyric[1] }}
+                    {{ song.lyric[0] }}...
                 </mat-card-content>
             </mat-card>
             <div class="button-div">
-                <button mat-raised-button routerLink="/song-present" routerLinkActive="active" class="formatted-button" (click)="onSelect(song)">Present</button>
+                <button mat-stroked-button routerLink="/song-present" routerLinkActive="active" class="button-extras" (click)="onSelect(song)">Present</button>
+                <button mat-stroked-button routerLink="/song-edit" routerLinkActive="active" class="button-extras" (click)="onSelect(song)">Edit</button>
             </div>
         </li>
     </ul>

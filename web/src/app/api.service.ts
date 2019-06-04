@@ -23,6 +23,10 @@ export class ApiService {
         return this.httpClient.post(`${this.apiURL}/songs`, song);
     }
 
+    public patchSong(song: Song) {
+        return this.httpClient.patch(`${this.apiURL}/songs/${song.id}`, song);
+    }
+
     public deleteSong(id: string) {
         let url: string = `${this.apiURL}/songs/${id}`;
         console.log(`URL: ${url}`);

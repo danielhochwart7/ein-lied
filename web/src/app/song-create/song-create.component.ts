@@ -20,15 +20,13 @@ export class SongCreateComponent implements OnInit {
 
     addSong() {
         const lyric: Array<string> = this.songDetails.lyric.split('\n');
-        const translations: Array<string> = this.songDetails.lyric.split('\n');
+        const translations: Array<string> = this.songDetails.translations.split('\n');
 
         const song = {
             title: this.songDetails.title,
             author: this.songDetails.author,
             lyric: lyric,
-            translations: {
-                'pt-br': translations
-            }
+            translations: translations
         };
 
         this.apiService.createSong(song)

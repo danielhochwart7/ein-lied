@@ -28,10 +28,11 @@ export class Song extends Entity {
   lyric: string[];
 
   @property({
-    type: 'object',
+    type: 'array',
+    itemType: 'string',
     required: false,
   })
-  translations?: object;
+  translations?: string[];
 
   // Define well-known properties here
 
