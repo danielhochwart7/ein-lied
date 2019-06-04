@@ -4,12 +4,12 @@
     margin: 2em 0 2em 0;
     box-shadow: 0px 8px 8px 8px rgba(0, 0, 0, 0.5);
     background-color: #e3ecf0;
-    height: 80%;
+    min-height: 80%;
     font-family: Garamond;
     position: relative;
 }
 
-.create-container > h1 {
+h1 {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     color: #364958;
 }
@@ -37,8 +37,17 @@ button {
     border-radius:50px;
 }
 
-mat-form-field {
-    max-width: 75%;
-    width: 30%;
+.title-author > mat-form-field {
+    min-width: 250px;
+    max-width: 350px;
     display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.lyric > mat-form-field {
+    display: inline-block;
+    width: 450px;
+    padding: 20px;
+    justify-content: center;
 }

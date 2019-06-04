@@ -3,5 +3,5 @@ export class Song {
     title: string;
     author: string;
     lyric: string[];
-    translations: object[];
+    translations: object;
 }

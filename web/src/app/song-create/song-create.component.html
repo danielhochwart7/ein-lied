@@ -1,20 +1,34 @@
 <div class="create-container">
     <h1>Create Song</h1>
-    <mat-form-field>
-        <input matInput [(ngModel)]="songDetails.title" placeholder="Title">
-    </mat-form-field>
+    <div class="title-author">
+        <mat-form-field>
+            <input matInput [(ngModel)]="songDetails.title" placeholder="Title">
+        </mat-form-field>
 
-    <mat-form-field>
-        <input matInput [(ngModel)]="songDetails.author" placeholder="Author">
-    </mat-form-field>
+        <mat-form-field>
+            <input matInput [(ngModel)]="songDetails.author" placeholder="Author">
+        </mat-form-field>
+    </div>
 
-    <mat-form-field>
-        <mat-label>Lyric</mat-label>
-        <textarea matInput
-                  cdkTextareaAutosize
-                  #autosize="cdkTextareaAutosize"
-                  cdkAutosizeMinRows="0"
-                  cdkAutosizeMaxRows="10" [(ngModel)]="songDetails.lyric"></textarea>
-    </mat-form-field>
+    <div class="lyric">
+        <mat-form-field>
+            <mat-label>Lyric</mat-label>
+            <textarea matInput
+                      cdkTextareaAutosize
+                      #autosize="cdkTextareaAutosize"
+                      cdkAutosizeMinRows="7"
+                      cdkAutosizeMaxRows="10" [(ngModel)]="songDetails.lyric"></textarea>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Translation</mat-label>
+            <textarea matInput
+                      cdkTextareaAutosize
+                      #autosize="cdkTextareaAutosize"
+                      cdkAutosizeMinRows="7"
+                      cdkAutosizeMaxRows="10" [(ngModel)]="songDetails.translations"></textarea>
+        </mat-form-field>
+    </div>
+
     <button class="formatted-button" mat-fab (click)="addSong()">Create</button>
 </div>

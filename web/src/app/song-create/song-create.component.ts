@@ -10,7 +10,7 @@ import {MatSnackBar} from '@angular/material';
 })
 export class SongCreateComponent implements OnInit {
 
-    @Input() songDetails = { title: '', author: '', lyric: ''};
+    @Input() songDetails = { title: '', author: '', lyric: '', translations: ''};
     private songs: Song[];
     constructor(private apiService: ApiService, private snackBar: MatSnackBar) {}
 
@@ -20,11 +20,15 @@ export class SongCreateComponent implements OnInit {
 
     addSong() {
         const lyric: Array<string> = this.songDetails.lyric.split('\n');
+        const translations: Array<string> = this.songDetails.lyric.split('\n');
 
         const song = {
             title: this.songDetails.title,
             author: this.songDetails.author,
-            lyric: lyric
+            lyric: lyric,
+            translations: {
+                'pt-br': translations
+            }
         };
 
         this.apiService.createSong(song)
@@ -46,11 +50,11 @@ export class SongCreateComponent implements OnInit {
             .toPromise()
             .then(data => {
                 this.songs = data;
-                console.log(this.songs)
+                console.log(this.songs);
             });
     }
 
     clearFields() {
-        this.songDetails = { title: '', author: '', lyric: ''};
+        this.songDetails = { title: '', author: '', lyric: '', translations: ''};
     }
 }
