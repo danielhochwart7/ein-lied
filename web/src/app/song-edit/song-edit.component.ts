@@ -20,8 +20,11 @@ export class SongEditComponent implements OnInit {
   ngOnInit() {
     this.song = this.apiService.currentSong;
     this.lyric = this.apiService.currentSong.lyric.join('\n');
-    console.log(this.apiService.currentSong);
-    this.translation = this.apiService.currentSong.translations.join('\n');
+    if (this.apiService.currentSong.translations) {
+        this.translation = this.apiService.currentSong.translations.join('\n');
+    } else {
+        this.translation = '';
+    }
   }
 
   editSong() {
