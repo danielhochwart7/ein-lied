@@ -29,7 +29,7 @@ export class SongEditComponent implements OnInit {
 
   editSong() {
       const lyric: Array<string> = this.lyric.split('\n');
-      const translations: Array<string> = this.translation.split('\n')
+      const translations: Array<string> = this.translation.split('\n');
 
       let song: Song = this.song;
       song.lyric = lyric;
