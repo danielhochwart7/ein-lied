@@ -1,7 +1,7 @@
 {
   "name": "MongoDb",
   "connector": "mongodb",
-  "url": "mongodb://dhochwart:123456a@ds135776.mlab.com:35776/dhochwart",
+  "url": "mongodb+srv://dhochwart:xP5qSO5Jr77f4CL7@cluster0.hvjqa.mongodb.net/dhochwart?retryWrites=true&w=majority",
   "host": "",
   "port": 0,
   "user": "",
