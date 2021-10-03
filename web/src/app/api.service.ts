@@ -34,7 +34,7 @@ export class ApiService {
     }
 
     public getSongById(id: string) {
-        return this.httpClient.get(`${this.apiURL}/songs/${id}`);
+        return this.httpClient.get<Song>(`${this.apiURL}/songs/${id}`);
     }
 
     public getSongs() {

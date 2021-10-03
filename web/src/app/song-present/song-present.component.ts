@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Song} from '../song';
 import {ApiService} from '../api.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-song-present',
@@ -11,10 +12,15 @@ export class SongPresentComponent implements OnInit {
 
   private song: Song;
 
-  constructor(private apiService: ApiService) { }
+  constructor(
+    private apiService: ApiService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
-    this.song = this.apiService.currentSong;
+    const id = this.route.snapshot.paramMap.get('id');
+    this.apiService.getSongById(id)
+      .subscribe(song => this.song = song);
     console.log(this.song);
   }
 }

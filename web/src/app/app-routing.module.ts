@@ -9,7 +9,7 @@ import {SongEditComponent} from './song-edit/song-edit.component';
 const routes: Routes = [
     { path: 'song-search', component: SongSearchComponent },
     { path: 'song-create', component: SongCreateComponent },
-    { path: 'song-present', component: SongPresentComponent },
+    { path: 'song-present/:id', component: SongPresentComponent },
     { path: 'song-edit', component: SongEditComponent }
 ];
 
