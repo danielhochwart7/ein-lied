@@ -18,7 +18,7 @@
                 </mat-card-content>
             </mat-card>
             <div class="button-div">
-                <button mat-stroked-button routerLink="/song-present" routerLinkActive="active" class="button-extras" (click)="onSelect(song)">Present</button>
+                <button mat-stroked-button routerLink="/song-present/{{ song.id }}" routerLinkActive="active" class="button-extras" (click)="onSelect(song)">Present</button>
                 <button mat-stroked-button routerLink="/song-edit" routerLinkActive="active" class="button-extras" (click)="onSelect(song)">Edit</button>
             </div>
         </li>
