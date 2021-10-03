@@ -14,7 +14,8 @@ export class SongPresentComponent implements OnInit {
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-    this.song = this.apiService.currentSong;
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.song = this.apiService.getSongById(id);
     console.log(this.song);
   }
 }
